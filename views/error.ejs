@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oops! Something Went Wrong | Smart Travel Planner</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-icon">🚧</div>
+        <h1 class="error-title">Travel Plans Detoured</h1>
+        <p class="error-message"><%= message || "We encountered an unexpected issue while planning your adventure. Don't worry, even the best travelers face detours sometimes!" %></p>
+        
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+            <a href="/" class="btn">
+                <span>🏠 Back to Home</span>
+            </a>
+            <button onclick="window.history.back()" class="btn" style="background: var(--gradient-dark);">
+                <span>↩️ Go Back</span>
+            </button>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: var(--gray-lighter); border-radius: var(--border-radius-md);">
+            <p style="margin: 0; color: var(--gray); font-size: 0.9rem;">
+                <strong>Need help?</strong> Try refreshing the page or check your internet connection. If the problem continues, please try again later.
+            </p>
+        </div>
+    </div>
+
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

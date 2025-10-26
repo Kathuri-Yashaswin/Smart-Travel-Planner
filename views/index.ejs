@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Travel Planner - Plan Your Perfect Trip</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>🌍 Smart Travel Planner</h1>
+            <p>Create your perfect travel itinerary with AI-powered recommendations. Discover hidden gems and plan unforgettable adventures.</p>
+        </div>
+        
+        <div class="form-container">
+            <h1 class="form-title">Plan Your Adventure</h1>
+            <p class="form-subtitle">Tell us about your dream destination and preferences, and we'll create a personalized itinerary just for you.</p>
+            
+            <form action="/plan" method="POST" id="travelForm">
+                <div class="form-group">
+                    <label for="city" class="form-label">Destination City</label>
+                    <input type="text" id="city" name="city" class="form-input" 
+                           placeholder="Where do you want to go? e.g., Paris, Tokyo, New York..." 
+                           required
+                           autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <span>Your Travel Interests</span>
+                        <small style="font-weight: normal; color: var(--gray); font-size: 0.9rem;">(Select all that apply)</small>
+                    </label>
+                    <div class="interests-grid">
+                        <label class="interest-option">
+                            <input type="checkbox" name="interests" value="Culture" class="interest-checkbox">
+                            <span>🏛️ Culture</span>
+                        </label>
+                        <label class="interest-option">
+                            <input type="checkbox" name="interests" value="Food" class="interest-checkbox">
+                            <span>🍕 Food</span>
+                        </label>
+                        <label class="interest-option">
+                            <input type="checkbox" name="interests" value="Adventure" class="interest-checkbox">
+                            <span>🏔️ Adventure</span>
+                        </label>
+                        <label class="interest-option">
+                            <input type="checkbox" name="interests" value="Nature" class="interest-checkbox">
+                            <span>🌲 Nature</span>
+                        </label>
+                        <label class="interest-option">
+                            <input type="checkbox" name="interests" value="Relaxation" class="interest-checkbox">
+                            <span>😌 Relaxation</span>
+                        </label>
+                        <label class="interest-option">
+                            <input type="checkbox" name="interests" value="Shopping" class="interest-checkbox">
+                            <span>🛍️ Shopping</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="days" class="form-label">Trip Duration</label>
+                    <select id="days" name="days" class="form-select">
+                        <option value="3">🎯 3 Days - Weekend Getaway</option>
+                        <option value="5">🌟 5 Days - Extended Break</option>
+                        <option value="7">🚀 7 Days - Full Week Adventure</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="form-btn">
+                    <span>✨ Generate Travel Plan</span>
+                    <span>✈️</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
